@@ -18,15 +18,15 @@
   "build": {
     "mac": {
       "target": "dmg",
-      "icon": "lib/res/icon/logo.icns"
+      "icon": "lib/res/icon/icon.icns"
     },
     "win": {
       "target": "msi",
-      "icon": "lib/res/icon/logo.ico"
+      "icon": "lib/res/icon/icon.ico"
     },
     "linux": {
       "target": "AppImage",
-      "icon": "lib/res/icon/logo.png"
+      "icon": "lib/res/icon/icon.png"
     }
   },
   "repository": {
