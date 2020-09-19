@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "Export image data to spreadsheets.",
   "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
   "scripts": {
     "dev": "electron .",
     "build:mac": "electron-builder -m",
@@ -16,6 +12,7 @@
     "test": "node test/spreadsheet"
   },
   "build": {
+    "productName": "Image Miner",
     "mac": {
       "target": "dmg",
       "icon": "lib/res/icon/icon.icns"
@@ -25,7 +22,8 @@
       "icon": "lib/res/icon/icon.ico"
     },
     "linux": {
-      "target": "AppImage",
+      "target": "deb",
+      "maintainer": "Mark Auger",
       "icon": "lib/res/icon/icon.png"
     }
   },
@@ -46,9 +44,11 @@
   },
   "homepage": "https://github.com/swimauger/ImageMiner#readme",
   "dependencies": {
-    "electron": "^10.1.2",
-    "electron-builder": "^22.8.1",
     "exif": "^0.6.0",
     "xlsx": "^0.16.7"
+  },
+  "devDependencies": {
+    "electron": "^10.1.2",
+    "electron-builder": "^22.8.1"
   }
 }
