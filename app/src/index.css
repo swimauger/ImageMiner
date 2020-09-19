@@ -1,0 +1,111 @@
+/* Theme */
+body {
+    margin: 0;
+    font-family: Helvetica;
+}
+
+:focus {
+    outline: none;
+}
+
+/* Searchbar */
+nav.searchbar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    height: 5vh;
+    padding: 1vw;
+}
+
+nav.searchbar i {
+    width: 3%;
+    font-size: 2vw;
+    color: #aaa;
+}
+
+nav.searchbar input {
+    width: 97%;
+    font-size: 2vw;
+    color: #aaa;
+    border: none;
+}
+
+nav.searchbar input::placeholder {
+    color: #aaa;
+}
+
+/* Main Container */
+div.container {
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+}
+
+/* File View */
+div.exports {
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
+
+div.exports h5 {
+    font-size: 1.5vw;
+    color: #aaa;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
+    padding: 5%;
+    border-bottom: 1px solid #ccc;
+}
+
+/* File Uploader */
+div.manager {
+    width: 75%;
+}
+
+/* File Dropoff */
+div.dropoff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+    border: 1px dashed #ccc;
+    width: 90%;
+    height: 50%;
+}
+
+div.dropoff i {
+    font-size: 15vw;
+    color: #ccc;
+}
+
+div.dropoff p {
+    font-size: 2vw;
+    color: #ccc;
+}
+
+div.dropoff a {
+    color: royalblue;
+    font-weight: bold;
+}
+
+div.dropoff a:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+div.uploads button {
+    background: royalblue;
+    height: 3vw;
+    width: 10vw;
+    font-size: 1.5vw;
+    color: white;
+    border: none;
+    margin-left: calc(95% - 10vw);
+}
+
+div.uploads button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
