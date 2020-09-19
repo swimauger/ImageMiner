@@ -1,0 +1,54 @@
+{
+  "name": "imageminer",
+  "version": "1.0.0",
+  "description": "Export image data to spreadsheets.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "electron .",
+    "build:mac": "electron-builder -m",
+    "build:win": "electron-builder -w",
+    "build:linux": "electron-builder -l",
+    "build": "electron-builder -mwl",
+    "test": "node test/spreadsheet"
+  },
+  "build": {
+    "mac": {
+      "target": "dmg",
+      "icon": "lib/res/icon/logo.icns"
+    },
+    "win": {
+      "target": "msi",
+      "icon": "lib/res/icon/logo.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "lib/res/icon/logo.png"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swimauger/ImageMiner.git"
+  },
+  "keywords": [
+    "Image",
+    "Data",
+    "Excel",
+    "Spreadsheet"
+  ],
+  "author": "Mark Auger",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/swimauger/ImageMiner/issues"
+  },
+  "homepage": "https://github.com/swimauger/ImageMiner#readme",
+  "dependencies": {
+    "electron": "^10.1.2",
+    "electron-builder": "^22.8.1",
+    "exif": "^0.6.0",
+    "xlsx": "^0.16.7"
+  }
+}
