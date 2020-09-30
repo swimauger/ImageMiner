@@ -46,6 +46,8 @@ div.exports {
     width: 25%;
     height: 100%;
     border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
 }
 
 div.exports h5 {
@@ -56,6 +58,42 @@ div.exports h5 {
     margin: 0;
     padding: 5%;
     border-bottom: 1px solid #ccc;
+}
+
+div.exports div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+div.exports div:hover i.fa-trash-alt {
+    display: block;
+}
+
+div.exports a {
+    text-decoration: none;
+    font-size: 2vw;
+    padding: 5px;
+    color: sandybrown;
+    width: 90%;
+}
+
+div.exports a:hover {
+    filter: brightness(90%);
+}
+
+div.exports i.fa-trash-alt {
+    display: none;
+    color: gray;
+    margin-right: 3px;
+    width: 10%;
+    text-align: center;
+}
+
+div.exports i.fa-trash-alt:hover {
+    color: crimson;
+    cursor: pointer;
 }
 
 /* File Uploader */
@@ -86,7 +124,7 @@ div.dropoff p {
 }
 
 div.dropoff a {
-    color: royalblue;
+    color: sandybrown;
     font-weight: bold;
 }
 
@@ -96,7 +134,7 @@ div.dropoff a:hover {
 }
 
 div.uploads button {
-    background: royalblue;
+    background: sandybrown;
     height: 3vw;
     width: 10vw;
     font-size: 1.5vw;
@@ -108,4 +146,26 @@ div.uploads button {
 div.uploads button:hover {
     cursor: pointer;
     filter: brightness(90%);
+}
+
+div.files {
+    overflow: scroll;
+    height: 30vh;
+}
+
+div.file {
+    font-size: 2vw;
+    padding: 1vw;
+    width: calc(90% - 2vw);
+    margin-left: 5%;
+    border: 1px solid lightgray;
+    color: sandybrown;
+}
+
+i.fa-file {
+    margin-right: 3%;
+}
+
+input[type="file"] {
+    display: none;
 }
