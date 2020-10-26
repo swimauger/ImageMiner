@@ -171,3 +171,27 @@ i.fa-file {
 input[type="file"] {
     display: none;
 }
+
+div.loading {
+    position: fixed;
+    display: none;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+div.loading div.message {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+div.loading div.message i {
+    font-size: 5vw;
+    margin-bottom: 10vh;
+}

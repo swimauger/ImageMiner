@@ -3,6 +3,8 @@ const { ipcRenderer } = require('electron');
 const $exports = document.querySelector('div.exports');
 const $files = document.querySelector('div.files');
 const $fileExplorer = document.querySelector('input[type="file"]');
+const $loading = document.querySelector('div.loading');
+const $loadingMessage = document.querySelector('div.loading div.message span');
 let pendingExportFiles = {};
 
 window.addEventListener('load', (event) => {
@@ -70,3 +72,15 @@ ipcRenderer.on('newexport', (event, data) => {
     </div>
     `;
 });
+
+ipcRenderer.on('loading', (event, isLoading) => {
+    if (isLoading) {
+        $loading.style.display = 'block';
+    } else {
+        $loading.style.display = 'none';
+    }
+});
+
+ipcRenderer.on('loadingimage', (event, image) => {
+    $loadingMessage.textContent = `Exporting image ${image}`;
+})

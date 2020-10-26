@@ -36,6 +36,10 @@ ipcMain.on('removeexport', async (event, data) => {
 ipcMain.on('export', async (event, data) => {
     const files = await fsp.readdir(dataFolder);
     const filePath = path.resolve(dataFolder, `imagemine-${files.length}.xlsx`);
-    await convert(data, filePath);
+    win.webContents.send('loading', true);
+    await convert(data, filePath, (imageId) => {
+        win.webContents.send('loadingimage', imageId);
+    });
+    win.webContents.send('loading', false);
     event.reply('newexport', filePath);
 });
