@@ -18,7 +18,7 @@
       "icon": "lib/res/icon/icon.icns"
     },
     "win": {
-      "target": "msi",
+      "target": "nsis",
       "icon": "lib/res/icon/icon.ico"
     },
     "linux": {
