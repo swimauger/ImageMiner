@@ -72,6 +72,8 @@ div.exports div:hover i.fa-trash-alt {
 }
 
 div.exports a {
+    height: 3vw;
+    overflow: scroll;
     text-decoration: none;
     font-size: 2vw;
     padding: 5px;
